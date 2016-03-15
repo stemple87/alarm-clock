@@ -1,3 +1,7 @@
+var getFormattedTime = require('./../js/timeformat.js').getFormattedTime;
+
 $(document).ready(function(){
-  $('#time').text(moment().format("HH:mm"));
+  var newTime = moment().format("HH:mm");
+  var theTime = getFormattedTime(newTime);
+  $('#time').text(theTime);
 });

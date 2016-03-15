@@ -1,13 +1,19 @@
-var alarmTime = require('./../js/alarm.js').alarmTime;
+require('./../js/alarm.js').alarmTime;
+var getFormattedTime = require('./../js/timeformat.js').getFormattedTime;
 
-$(document).ready(function(event){
 
-  $("#alarmTime").submit(function(){
-    event.preventDefault;
+
+$(document).ready(function(){
+  $("#alarmTime").submit(function(event){
+    event.preventDefault();
     var alarmTime = $('#alarm').val();
     console.log(alarmTime);
+    var formattedTime = getFormattedTime(alarmTime);
+    $("#alarm-hide").show();
+    $("#display-alarm").text(formattedTime);
     // alarmClock(alarmTime);
   });
+
 });
 
 $(document).ready(function(){
@@ -19,6 +25,10 @@ $(document).ready(function(){
   });
 });
 
+var getFormattedTime = require('./../js/timeformat.js').getFormattedTime;
+
 $(document).ready(function(){
-  $('#time').text(moment().format("HH:mm"));
+  var newTime = moment().format("HH:mm");
+  var theTime = getFormattedTime(newTime);
+  $('#time').text(theTime);
 });
