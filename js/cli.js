@@ -1,7 +1,9 @@
 var helloWorld = require('./hello.js').helloWorld;
+var alert = require('alert');
+alert.start();
 
 console.log("Just saying hello!");
-var result = helloWorld();
-result.forEach(function(element) {
-  console.log(element);
-});
+alert.get(helloWorld());
+// result.forEach(function(element) {
+//   console.log(element);
+// });

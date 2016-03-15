@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "alert": "0.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0"
   }
 }
