@@ -1,5 +1,5 @@
-exports.var alarmClock = function(alarmTime) {
+exports.alarmClock = function(alarmTime) {
   if (moment().format("HH:mm") === alarmTime) {
-    alert("Wake up!")
+    alert("Wake up!");
   }
 };

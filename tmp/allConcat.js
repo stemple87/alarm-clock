@@ -1,9 +1,12 @@
-var helloWorld = require('./../js/hello.js').helloWorld;
+var alarmTime = require('./../js/alarm.js').alarmTime;
 
- $(document).ready(function() {
-  $('#hello').click(function(event) {
-    event.preventDefault();
-    helloWorld();
+$(document).ready(function(event){
+
+  $("#alarmTime").submit(function(){
+    event.preventDefault;
+    var alarmTime = $('#alarm').val();
+    console.log(alarmTime);
+    // alarmClock(alarmTime);
   });
 });
 
@@ -17,5 +20,5 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('#time').text(moment());
+  $('#time').text(moment().format("HH:mm"));
 });
