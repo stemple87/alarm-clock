@@ -1,8 +1,9 @@
-var helloWorld = require('./../js/hello.js').helloWorld;
+var alarmTime = require('./../js/alarm.js').alarmTime;
 
- $(document).ready(function() {
-  $('#hello').click(function(event) {
+$(document).ready(function(event){
+  $("#alarmTime").submit(function(){
     event.preventDefault();
-    helloWorld();
-  });
-});
+    var alarmTime = $('.titleId').val();
+    alarmClock(alarmTime);
+  })
+})
